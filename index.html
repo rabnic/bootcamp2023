@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Nicholas Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        margin: 0;
+      }
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 40px;
+        background-color: #fff;
+      }
+      .logo {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        box-shadow: 0 0 2px 0px #e75000;
+      }
+      nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      nav a {
+        margin-left: 25px;
+        color: #e75000;
+        font-size: 18px;
+        text-shadow: 0 0 1px #222;
+        text-decoration: none;
+      }
+      nav a:hover {
+        color: #333;
+      }
+      main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 30px;
+      }
+      .main-img {
+        width: 100%;
+        height: 600px;
+      }
+
+      .biography {
+        text-align: center;
+        margin-right: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      .biography p {
+        font-size: 1.2rem;
+        line-height: 1.3rem;
+      }
+      .biography > div {
+        flex: 50%;
+        max-width: 60%;
+        padding: 10px 50px;
+      }
+      .image {
+        
+        width: 300px;
+        height: 300px;
+        box-shadow: 0 0 5px #000;
+        object-fit: cover;
+        border-radius: 50%;
+        margin: 20px;
+      }
+      footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 20px;
+        background-color: #ddd;
+      }
+      .address {
+        text-align: center;
+        flex: 10%;
+      }
+      .social-media {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .social-media i {
+        margin-left: 20px;
+        font-size: 24px;
+        color: #000;
+      }
+      .quick-links {
+        text-align: center;
+        flex: 10%;
+      }
+      .quick-links a {
+        margin-top: 20px;
+        color: #000;
+        text-decoration: none;
+      }
+      .map {
+        width: 100%;
+        height: 240px;
+        flex: 30%;
+      }
+    </style>
+  </head>
+  <body>
+  <header>
+    <img src="assets/logo.jpg" alt="Logo" class="logo">
+    <nav>
+      <a href="#">Home.</a>
+      <a href="about.html">About.</a>
+      <a href="contact.html">Contact.</a>
+    </nav>
+  </header>
+  <main>
+    <img src="assets/big-pic.jpg" alt="Big Image" class="main-img">
+    <div class="biography">
+      <div>
+        <h2>Hi! I am Nicholas,</h2>
+        <p>
+            A pragmatic modern frontend developer and test automation engineer in the making. I aim to build Front-end of Websites and 
+            Web Applications that lead to the success of the overall product. 
+        </p>
+      </div>
+      <img src="assets/nicho.jpg" alt="Nicholas picture" class="image">
+    </div>
+  </main>
+  <footer>
+    <div class="address">
+      <p>Hinterland Ave Street</p>
+      <p>Mamelodi East, 0122</p>
+      <p>Tshwane, South Africa</p>
+      <div class="social-media">
+        <a href="https://za.linkedin.com/in/nicholasrabalao" target="_blank"><i class="fa fa-linkedin"></i></a>
+        <a href="https://github.com/rabnic" target="_blank"><i class="fa fa-github"></i></a>
+        <a href="https://mobile.twitter.com/rabnic101" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+      </div>
+    </div>
+    <div class="quick-links">
+      <a href="#">Privacy Policy | </a>
+      <a href="#">Terms of Service | </a>
+      <a href="#">FAQ</a>
+    </div>
+    <div class="map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5351.891493876127!2d28.391300148379692!3d-25.72312924536731!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e955f3419f8521f%3A0xb4053d3353d81b4b!2sHinterland%20Ave%2C%20Mamelodi%2C%20Pretoria%2C%200122!5e0!3m2!1sen!2sza!4v1675753334502!5m2!1sen!2sza" width="600" height="240" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </footer>
+</body>
+</html>
