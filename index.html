@@ -4,43 +4,10 @@
     <meta charset="UTF-8">
     <title>Nicholas Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat|Quicksand">
+    <link rel="stylesheet" href="assets/css/styles.css">
     <style>
-      * {
-        box-sizing: border-box;
-      }
-      body {
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        margin: 0;
-      }
-
-      header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px 40px;
-        background-color: #fff;
-      }
-      .logo {
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        box-shadow: 0 0 2px 0px #e75000;
-      }
-      nav {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      nav a {
-        margin-left: 25px;
-        color: #e75000;
-        font-size: 18px;
-        text-shadow: 0 0 1px #222;
-        text-decoration: none;
-      }
-      nav a:hover {
-        color: #333;
-      }
+      
       main {
         display: flex;
         flex-direction: column;
@@ -48,9 +15,37 @@
         align-items: center;
         padding: 0 30px;
       }
-      .main-img {
-        width: 100%;
-        height: 600px;
+      .main-vid {
+        min-width: 100vw;
+        min-height: 100vh;
+      }
+      .name {
+        font-size: 2.5rem;
+        line-height: 1.125;
+        margin-bottom: 0.5rem;
+      }
+      .job {
+        font-family: "Montserrat", "Quicksand", sans-serif;
+        letter-spacing: 0.3rem;
+        text-transform: uppercase;
+        color: #ffe479;
+        font-size: 0.75rem;
+      }
+
+      .hr {
+          background-color: #ff470f;
+          border: none;
+          content: "";
+          height: 1px;
+          margin-bottom: 1.5rem;
+          margin-top: 1.5rem;
+          transform-origin: center left;
+          width: 10rem;;
+      }
+
+      .description {
+          font-size: 1.5rem;
+          line-height: 2em;
       }
 
       .biography {
@@ -79,63 +74,33 @@
         border-radius: 50%;
         margin: 20px;
       }
-      footer {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        padding: 20px;
-        background-color: #ddd;
-      }
-      .address {
-        text-align: center;
-        flex: 10%;
-      }
-      .social-media {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      .social-media i {
-        margin-left: 20px;
-        font-size: 24px;
-        color: #000;
-      }
-      .quick-links {
-        text-align: center;
-        flex: 10%;
-      }
-      .quick-links a {
-        margin-top: 20px;
-        color: #000;
-        text-decoration: none;
-      }
-      .map {
-        width: 100%;
-        height: 240px;
-        flex: 30%;
-      }
+      
     </style>
   </head>
   <body>
   <header>
-    <img src="assets/logo.jpg" alt="Logo" class="logo">
+    <a href="index.html" class="logo">NicholasR;</a>
     <nav>
-      <a href="#">Home.</a>
+      <a href="#" class="active">Home.</a>
       <a href="about.html">About.</a>
       <a href="contact.html">Contact.</a>
     </nav>
   </header>
   <main>
-    <img src="assets/big-pic.jpg" alt="Big Image" class="main-img">
+    <video autoplay muted loop controls class="main-vid" width="100%" height="700px">
+      <source src="assets/videos/code_fly.mp4" type="video/mp4">
+    </video>
     <div class="biography">
       <div>
-        <h2>Hi! I am Nicholas,</h2>
-        <p>
+        <h1 class="name">Hi! I am Nicholas</h1>
+        <p class="job">Junior Frontend Developer</p>
+        <hr class="hr">
+        <p class="description">
             A pragmatic modern frontend developer and test automation engineer in the making. I aim to build Front-end of Websites and 
             Web Applications that lead to the success of the overall product. 
         </p>
       </div>
-      <img src="assets/nicho.jpg" alt="Nicholas picture" class="image">
+      <img src="assets/images/nicho.jpg" alt="Nicholas picture" class="image">
     </div>
   </main>
   <footer>
