@@ -1,10 +1,12 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
   }
 
 html {
     background-color: #5f45bb;
-    background-image: linear-gradient(to bottom right,#180cac, #e75000);
+    background-image: linear-gradient(to bottom right,#212a3a 50%, #f66565);
     color: #fff;
     font-family: "Quicksand", sans-serif;
     font-size: 16px;
@@ -13,24 +15,35 @@ html {
     line-height: 1.5;
     min-height: 100vh;
     min-width: 300px;
+    width: 100%;
     overflow-x: hidden;
     text-shadow: 0 3px 5px rgba(0,0,0,0.1);
 }
   body {
     margin: 0;
+    padding-top: 100px;
+  }
+
+  .main-side-margins {
+    padding-left: 40px;
+    padding-right: 40px;
   }
 
 /* Header Section*/
 
   header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 40px;
-    background-color: rgba(255,255,255,.9);
+    padding: 20px 0px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0,0,0,.2);
   }
   .logo {
-    margin-left: 25px;
     color: #1e90ff;
     font-size: 18px;
     text-shadow: 0 0 1px #222;
@@ -42,18 +55,11 @@ html {
     font-weight: 900;
   }
   .logo::before {
-    content: "{";
-    position: absolute;
-    bottom: -40%;
-    left: -10%;
-    color: #daa520;
+    content: "";
+
   }
   .logo::after {
-    content: "}";
-    position: absolute;
-    top: -40%;
-    right: -10%;
-    color: #daa520;
+    content: "";
   }
   nav {
     display: flex;
@@ -62,14 +68,17 @@ html {
   }
   nav a {
     margin-left: 25px;
-    color: #e75000;
+    color: #f66565;
     font-size: 18px;
-    text-shadow: 0 0 1px #222;
+    text-shadow: 0 0 1px #212a3a;
     text-decoration: none;
   }
+
+ 
   nav a:hover,
   .active {
-    color: #333;
+    font-weight: 500;
+    border-bottom: rgba(0,0,0,.2) .3px solid;
   }
 
 
@@ -78,8 +87,8 @@ html {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 20px;
-    margin-top: 2.5rem;
+    align-items: center;
+    padding: 40px 20px;
     background-color: rgba(0,0,0,0.1);
   }
   .address {

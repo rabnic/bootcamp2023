@@ -5,6 +5,7 @@
     <title>Contact Me</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat|Quicksand">
+    <link rel="stylesheet" href="assets/css/animations.css">
     <link rel="stylesheet" href="assets/css/styles.css">
     <style>
       main {
@@ -45,35 +46,37 @@
     </style>
   </head>
   <body>
-  <header>
-    <a href="index.html" class="logo">NicholasR;</a>
+  <header class="main-side-margins">
+    <a href="index.html" class="logo">
+      <img src="/assets/logo/logo1.png" alt="logo">
+    </a>
     <nav>
       <a href="index.html">Home.</a>
       <a href="about.html">About.</a>
       <a href="#" class="active">Contact.</a>
     </nav>
   </header>
-  <main>
+  <main class="main-side-margins">
     <h1>Get In Touch With Me</h1>
     <div class="container">
-      <form action="/action_page.php">
+      <form action="https://formspree.io/f/xayzooal" method="post">
         <label for="fname">First Name</label>
-        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
     
         <label for="lname">Last Name</label>
-        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+        <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
         
-        <label for="lname">Last Name</label>
-        <input type="email" id="lname" name="lastname" placeholder="email@example.com">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="email@example.com" required>
         
-        <label for="subject">Subject</label>
-        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+        <label for="subject">Message</label>
+        <textarea id="message" name="message" placeholder="Write something.." style="height:200px" required></textarea>
     
         <input type="submit" value="Submit">
       </form>
     </div>
   </main>
-  <footer>
+  <footer class="main-side-margins">
     <div class="address">
       <p>Hinterland Ave Street</p>
       <p>Mamelodi East, 0122</p>
