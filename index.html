@@ -1,26 +1,35 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Nicholas Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat|Quicksand">
-    <link rel="stylesheet" href="assets/css/animations.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Montserrat|Quicksand"
+    />
+    <link rel="stylesheet" href="assets/css/animations.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
     <style>
-      
       main {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 0;
+       
+      }
+      .hero-container > * {
+        border: 0px solid greenyellow;
       }
       .hero-container {
         background-image: url("assets/images/big-pic.jpg");
-        background-color: rgba(0,0,0,.3);
-        opacity: .7;
+        background-color: rgba(0, 0, 0, 1);
+        opacity: 0.65;
         background-position: center;
         background-size: cover;
         object-fit: cover;
@@ -28,42 +37,95 @@
         height: 100vh;
         display: flex;
         justify-content: center;
+        align-items: center;
       }
       .hero-container > div {
-        background-color: rgba(0,0,0,1);
-        width: max-content;
+        /* background-image: linear-gradient(
+          to bottom right,
+          #212a3a 50%,
+          #f66565
+        ); */
+        max-width: 80vw;
         height: max-content;
-        margin-top: 15vh;
+        /* margin-top: 15vh; */
         padding: 15px;
         border-radius: 20px;
-        box-shadow: 0 0 10px #111;
+        box-shadow: 0 0 10px
+          linear-gradient(to bottom right, #212a3a 50%, #f66565);
+        display: flex;
+        justify-content: space-between;
+      }
+      .hero-container img {
+        max-width: 200px;
+        height: auto;
       }
       .hero-heading {
         font-size: 6rem;
+        font-family: "Bebas Neue", sans-serif;
         color: #fff;
-        text-shadow: none;
+        text-shadow: 0px 0px 2px 2px #000;
         line-height: 1;
         font-weight: 900;
         text-transform: uppercase;
-        letter-spacing: -0.105em;
+        letter-spacing: 0.1em;
       }
       .hero-heading span {
-        font-size: .75em;
-        color: #ddd;
+        font-size: 0.75em;
+        color: #bbb;
       }
-      
 
-      
+      .biography > * {
+        /* border: 1px solid yellow; */
+      }
+
       .biography {
         background-color: #212a3a;
         text-align: center;
         margin-right: 0;
+        padding: 3.2rem 0;
         display: flex;
         justify-content: space-around;
         align-items: center;
         flex-wrap: wrap;
         width: 100vw;
+        margin-bottom: 5px;
       }
+
+      #currently-doing,
+      #projects {
+        flex-direction: column;
+      }
+
+      #currently-doing .name {
+        font-size: 3rem;
+        margin-bottom: 2rem;
+      }
+
+      #currently-doing > .content,
+      #projects > .content  {
+        max-width: 80%;
+        /* border: 1px solid tomato; */
+      }
+
+
+      #currently-doing .row {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        /* border: 1px solid tomato; */
+        align-items: center;
+        justify-content:center;
+        margin-bottom: 15px;
+        padding: 5px 0;
+      }
+
+      #currently-doing .row.reverse {
+        grid-template-columns: 3fr 1fr;
+        justify-items: end;
+        border-top: .1px solid #f66565;
+        border-bottom: .1px solid #f66565;
+        padding: 10px 0;
+      }
+
       .biography p {
         font-size: 1.2rem;
         line-height: 1.3rem;
@@ -74,6 +136,7 @@
         align-items: center;
         justify-content: center;
         flex: 50%;
+        
         max-width: 60%;
         /*padding: 10px 50px;*/
       }
@@ -91,23 +154,22 @@
       }
 
       .hr {
-          background-color: #ff470f;
-          border: none;
-          content: "";
-          height: 1px;
-          margin-bottom: 1.5rem;
-          margin-top: 1.5rem;
-          transform-origin: center left;
-          width: 10rem;;
+        background-color: #ff470f;
+        border: none;
+        content: "";
+        height: 1px;
+        margin-bottom: 1.5rem;
+        margin-top: 1.5rem;
+        transform-origin: center left;
+        width: 10rem;
       }
 
       .description {
-          font-size: 1.5rem;
-          line-height: 2em;
-          max-width: 600px;
+        font-size: 1.5rem;
+        line-height: 2em;
+        max-width: 600px;
       }
       .image {
-        
         width: 300px;
         height: 300px;
         box-shadow: 0 0 5px #000;
@@ -115,13 +177,41 @@
         border-radius: 50%;
         margin: 20px;
       }
-      
+
+      #projects .content {
+        display: flex;
+        flex-wrap: wrap;
+
+      }
+
+      #projects .card {
+        width: 300px;
+        min-height: 350px;
+        box-shadow: 0 0 3px 0 #fff;
+      }
     </style>
   </head>
   <body>
+    <div class="background">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     <header class="main-side-margins">
       <a href="index.html" class="logo">
-        <img src="/assets/logo/logo1.png" alt="logo">
+        <img src="/assets/logo/logo1.png" alt="logo" />
       </a>
       <nav>
         <a href="#" class="active">Home.</a>
@@ -129,70 +219,128 @@
         <a href="contact.html">Contact.</a>
       </nav>
     </header>
-  <main class="main-side-margins">
-    <!-- <video autoplay muted loop controls class="main-vid" width="100%" height="700px">
-      <source src="assets/videos/code_fly.mp4" type="video/mp4">
-    </video> -->
-    <div class="background">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-   </div>
+    <main class="main-side-margins">
+      <!-- <video autoplay muted loop controls class="main-vid" width="100%" height="700px">
+        <source src="assets/videos/code_fly.mp4" type="video/mp4">
+      </video> -->
 
-   <div class="hero-container">
-    <div>
-      <h1 class="hero-heading">
-        Front-end Developer <br>
-        <span>on Quality Products</span>
-      </h1>
-    </div>
-
-   </div>
-
-    <div class="biography main-side-margins">
-      <div class="content">
-        <h2 class="name">Hi, I am Nicholas Rabalao</h2>
-        <p class="job">Junior Frontend Developer</p>
-        <hr class="hr">
-        <p class="description">
-            A pragmatic modern frontend developer and test automation engineer in the making. I aim to build Front-end of Websites and 
-            Web Applications that lead to the success of the overall product. 
-        </p>
+      <div class="hero-container">
+        <div>
+          <h1 class="hero-heading">
+            Front-end Developer <br />
+            <span>on Quality Products</span>
+          </h1>
+          <img src="assets/images/developer.png" alt="Developer Illustration" srcset="">
+        </div>
       </div>
-      <img src="assets/images/nicho.jpg" alt="Nicholas picture" class="image">
-    </div>
-  </main>
-  <footer class="main-side-margins">
-    <div class="address">
-      <p>Hinterland Ave Street</p>
-      <p>Mamelodi East, 0122</p>
-      <p>Tshwane, South Africa</p>
-      <div class="social-media">
-        <a href="https://za.linkedin.com/in/nicholasrabalao" target="_blank"><i class="fa fa-linkedin"></i></a>
-        <a href="https://github.com/rabnic" target="_blank"><i class="fa fa-github"></i></a>
-        <a href="https://mobile.twitter.com/rabnic101" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+
+      <div class="biography main-side-margins">
+        <div class="content">
+          <h2 class="name">Hi, I am Nicholas Rabalao</h2>
+          <p class="job">Junior Frontend Developer</p>
+          <hr class="hr" />
+          <p class="description">
+            A pragmatic modern frontend developer and test automation engineer
+            in the making. I aim to build Front-end of Websites and Web
+            Applications that lead to the success of the overall product.
+          </p>
+        </div>
+        <img
+          src="assets/images/nicho.jpg"
+          alt="Nicholas picture"
+          class="image"
+        />
       </div>
-    </div>
-    <div class="quick-links">
-      <a href="#">Privacy Policy | </a>
-      <a href="#">Terms of Service | </a>
-      <a href="#">FAQ</a>
-    </div>
-    <div class="map">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5351.891493876127!2d28.391300148379692!3d-25.72312924536731!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e955f3419f8521f%3A0xb4053d3353d81b4b!2sHinterland%20Ave%2C%20Mamelodi%2C%20Pretoria%2C%200122!5e0!3m2!1sen!2sza!4v1675753334502!5m2!1sen!2sza" width="600" height="240" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-  </footer>
-</body>
+
+      <div class="biography main-side-margins" id="currently-doing">
+        <h2 class="name">What I am doing currently:</h2>
+        <div class="content">
+          <div class="row">
+            <img src="assets/images/bootcamp-poster-1.png" width="250" alt="">
+            <p>I am a passionate participant of mLab CodeTribe Academy Bootcamp where the focus ison the fundamentals of web development. 
+              The Bootcamp is a preparation to a 6-month Software development programme. I am putting as much effort needed to be part of this great programme.
+            </p>
+          </div>
+          <div class="row reverse">
+
+            <p>I have enrolled on The Frontend Developer Career Path self-paced course at Scrimba to improve and practically learn enough HTML, CSS, JavaScript, and React.
+              The course will turn me into a professional and hireable developer through building dozen project and solving interactive coding challenges.
+            </p>
+            <img src="assets/images/frontend-path.webp" width="250" alt="">
+          </div>
+          <div class="row">
+            <img src="assets/images/testuni.jpg" width="250" alt="">
+            <p>I have recently grown interest in software testing. So I am learning software test automation at Test Automation University in order to not only build software products
+              but to also have great insight on how test and produce quality sofware. I aim to be a Software Developer in Test.
+            </p>
+          </div>
+      </div>
+      </div>
+
+      <div class="biography main-side-margins" id="projects">
+        <h2 class="name">Few of projects I built:</h2>
+        <div class="content">
+          <div class="card">
+              <div class="head">
+                <h3 class="project-title">
+                  Time Tracking Dashboard
+                </h3>
+              </div>
+              <div class="body">
+                <p class="description">
+                  The final activity project of CodeTribe Bootcamp. 
+                </p>
+                <div class="tools">
+                  <p>Tools used:</p>
+                  <img src="/assets/logo/logo6.png" width="40" alt="">
+                  <img src="/assets/logo/logo6.png" width="40" alt="">
+                  <img src="/assets/logo/logo6.png" width="40" alt="">
+                </div>
+              </div>
+              <div class="footer">
+                <button>Live</button>
+                <button>Repo</button>
+              </div>
+          </div>
+      </div>
+      </div>
+
+      
+    </main>
+
+    <footer class="main-side-margins">
+      <div class="address">
+        <p>Hinterland Ave Street</p>
+        <p>Mamelodi East, 0122</p>
+        <p>Tshwane, South Africa</p>
+        <div class="social-media">
+          <a href="https://za.linkedin.com/in/nicholasrabalao" target="_blank"
+            ><i class="fa fa-linkedin"></i
+          ></a>
+          <a href="https://github.com/rabnic" target="_blank"
+            ><i class="fa fa-github"></i
+          ></a>
+          <a href="https://mobile.twitter.com/rabnic101" target="_blank"
+            ><i class="fa fa-twitter" aria-hidden="true"></i
+          ></a>
+        </div>
+      </div>
+      <div class="quick-links">
+        <a href="#">Privacy Policy | </a>
+        <a href="#">Terms of Service | </a>
+        <a href="#">FAQ</a>
+      </div>
+      <div class="map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5351.891493876127!2d28.391300148379692!3d-25.72312924536731!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e955f3419f8521f%3A0xb4053d3353d81b4b!2sHinterland%20Ave%2C%20Mamelodi%2C%20Pretoria%2C%200122!5e0!3m2!1sen!2sza!4v1675753334502!5m2!1sen!2sza"
+          width="600"
+          height="240"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </footer>
+  </body>
 </html>
