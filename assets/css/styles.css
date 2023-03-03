@@ -17,7 +17,7 @@ html {
   line-height: 1.5;
   
   max-width: 99vw;
-  border: .5px solid red;
+ 
   text-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
 }
 body {
@@ -97,7 +97,6 @@ footer {
   align-items: center;
   padding: 40px 20px;
   background-color: rgba(0, 0, 0, 0.2);
-  border: .5px solid gold;
 }
 .address {
   text-align: center;
